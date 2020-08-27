@@ -1,0 +1,20 @@
+#!/bin/sh
+DIR=/home/username/hosting/public
+
+URL=http://your-webflow-site.webflow.io/
+
+cd $DIR
+
+wget $URL --recursive --page-requisites --html-extension --convert-links -xnH -e robots=off
+
+firebase deploy
+
+
+
+wget https://portfolio-43fd2d.webflow.io/ --recursive --page-requisites --html-extension --convert-links -xnH -e robots=off
+
+vscode format: alt-shift-f
+
+    <script>
+        setTimeout(function(){const elements = document.getElementsByClassName("w-webflow-badge"); while (elements.length > 0) elements[0].remove();}, 900);
+    </script>
